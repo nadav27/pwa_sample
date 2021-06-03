@@ -1,0 +1,10 @@
+<template>
+  <h1>${message}</h1>
+  <div repeat.for="video of videos">
+    <video id="my-player" class="video-js" controls preload="auto" data-setup='{}'>
+      <source src.bind="video.url" type="video/mp4">
+      </source>
+    </video>
+    <button if.bind="online" click.delegate="saveAndUploadVideo(video)">Download</button>
+  </div>
+</template>
