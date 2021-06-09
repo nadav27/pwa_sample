@@ -48,6 +48,10 @@ export class App {
     }    
   }
 
+  async attached() {
+    navigator.serviceWorker.register('/sw.js');
+  }
+
   async saveAndUploadVideo(video) {
     console.log(video);
     const exists = async (id) => {
